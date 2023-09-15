@@ -14,16 +14,8 @@ export default function MovieCard({
 }) {
   const [genres, setGenres] = useState([]);
   useEffect(() => {
-    const options = {
-      method: "GET",
-      headers: {
-        accept: "application/json",
-        Authorization:
-          "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNGU2NWJhNDViMWYyMTg5ODBjMmE3YTcxNDNmMGUwMSIsInN1YiI6IjY0ZmU2OWM4ZGI0ZWQ2MTAzODU0ZjljYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2L8tBFvYGuT_7MLmv2tOANRpfUM7vbsPXECPy-oeo7I"
-      }
-    };
-
-    fetch(`https://api.themoviedb.org/3/movie/${id}`, options)
+    const apiKey = "d4e65ba45b1f218980c2a7a7143f0e01";
+    fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`)
       .then(response => {
         if (!response.ok) {
           throw new Error(`HTTP error! Status: ${response.status}`);
