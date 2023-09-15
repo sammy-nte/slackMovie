@@ -57,6 +57,10 @@ export default function MovieDetail() {
     setAddedToFav(!addedToFav); 
   }
 
+  const localDate = new Date(movieDetail.release_date); 
+const utcDate = localDate.toISOString();
+
+
   return (
     <>
       <SearchArea />
@@ -91,7 +95,7 @@ export default function MovieDetail() {
                         {movieDetail.title}
                       </p>
                       <p data-testid="movie-release-date">
-                        {movieDetail.release_date}
+                        {utcDate}
                       </p>
                       <p data-testid="movie-runtime">
                         {movieDetail.runtime} mins
