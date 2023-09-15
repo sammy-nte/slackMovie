@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import SearchSvg from "./Svgs/SearchSvg";
+import SearchSvg from "./svgs/SearchSvg";
 import { Link } from "react-router-dom";
 
 export default function SearchArea() {
