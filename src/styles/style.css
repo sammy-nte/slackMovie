@@ -363,15 +363,15 @@ body {
 
 .details-ratings {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   margin: 1em 0;
   width: fit-content;
+  flex-direction: column;
 }
 
 .details-ratings p {
   font-weight: 300;
-  padding-right: 1em;
+  padding: .3em 0;
 }
 
 .detail-title {
