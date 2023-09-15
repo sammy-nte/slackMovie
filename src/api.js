@@ -1,15 +1,8 @@
-const options = {
-  method: "GET",
-  headers: {
-    accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkNGU2NWJhNDViMWYyMTg5ODBjMmE3YTcxNDNmMGUwMSIsInN1YiI6IjY0ZmU2OWM4ZGI0ZWQ2MTAzODU0ZjljYiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2L8tBFvYGuT_7MLmv2tOANRpfUM7vbsPXECPy-oeo7I"
-  }
-};
+const apiKey = 'd4e65ba45b1f218980c2a7a7143f0e01'; 
 
 export async function getTopMovies() {
-  const url = "https://api.themoviedb.org/3/trending/movie/day?language=en-US";
-  const res = await fetch(url, options);
+  const url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}&language=en-US`;
+  const res = await fetch(url);
   if (!res.ok) {
     throw {
       message: "Failed to fetch top movies",
@@ -23,8 +16,8 @@ export async function getTopMovies() {
 
 export async function getSliderMovies() {
   const url =
-    "https://api.themoviedb.org/3/movie/popular?language=en-US&page=1";
-  const res = await fetch(url, options);
+    `https://api.themoviedb.org/3/movie/popular?api_key=${apiKey}&language=en-US&page=1`;
+  const res = await fetch(url);
   if (!res.ok) {
     throw {
       message: "Failed to fetch movie slides",
@@ -37,11 +30,11 @@ export async function getSliderMovies() {
 }
 
 export async function getSearchedMovies( search) {
-  const url = `https://api.themoviedb.org/3/search/movie?&query=${encodeURIComponent(
+  const url = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${encodeURIComponent(
     search
   )}`;
 
-  const res = await fetch(url, options);
+  const res = await fetch(url);
   if (!res.ok) {
     throw {
       message: "Failed to fetch movie slides",
@@ -54,8 +47,8 @@ export async function getSearchedMovies( search) {
 }
 
 export async function getMovieById(id){
-  const url = `https://api.themoviedb.org/3/movie/${id}`
-  const res = await fetch(url, options)
+  const url = `https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}`
+  const res = await fetch(url)
   if(!res.ok){
     throw{
       message: "Failed to fetch movies",
