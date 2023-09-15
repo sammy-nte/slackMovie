@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { getSearchedMovies } from "../api";
-import MovieCard from "../components/movieCard";
+import MovieCard from "../components/MovieCard";
 import Loading from "../components/Loading";
 
 export function loader({ params }) {

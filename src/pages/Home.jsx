@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MovieCard from "../components/movieCard";
+import MovieCard from "../components/MovieCard";
 import { getTopMovies } from "../api";
 import { useLoaderData } from "react-router";
 import Loading from "../components/Loading";

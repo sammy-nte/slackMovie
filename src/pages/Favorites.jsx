@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getMovieById } from "../api";
-import MovieCard from "../components/movieCard";
+import MovieCard from "../components/MovieCard";
 import SearchArea from "../components/SearchArea";
 import Loading from "../components/Loading";
 

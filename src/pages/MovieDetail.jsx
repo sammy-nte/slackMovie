@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { useLoaderData, useLocation, useParams } from "react-router";
+import { useLoaderData, useParams } from "react-router";
 import RatingSvg from "../components/svgs/RatingSvg";
 import { getMovieById } from "../api";
 import SearchArea from "../components/SearchArea";
