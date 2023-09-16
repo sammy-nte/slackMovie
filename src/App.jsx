@@ -5,7 +5,6 @@ import {
   Route
 } from "react-router-dom";
 import Home, { loader as homeLoader } from "./pages/Home";
-import Something from "./pages/MovieDetail";
 import Search, {loader as searchLoader} from "./pages/Search";
 import MovieDetail, {loader as movieDetailLoader} from "./pages/MovieDetail";
 import Layout, { loader as layoutLoader } from "./pages/Layout";
