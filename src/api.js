@@ -1,7 +1,7 @@
 const apiKey = 'd4e65ba45b1f218980c2a7a7143f0e01'; 
 
 export async function getTopMovies() {
-  const url = `https://api.themoviedb.org/3/trending/movie/day?api_key=${apiKey}&language=en-US`;
+  const url = `https://api.themoviedb.org/3/movie/top_rated?api_key=${apiKey}&language=en-US&page=1`;
   const res = await fetch(url);
   if (!res.ok) {
     throw {
