@@ -1,14 +1,10 @@
-# Movie Finder React App
-
-## Getting Started
+## How to run this project locally
 
 To run this React project, follow these steps:
 
-1. Clone the Git repository to your local machine:
-# git clone <repository_url>
-2. Navigate to the project directory:
-# cd slackReact1
-3. Install the project dependencies using npm:
-# npm install
-4. Start the project:
-# npm run dev 
+# Open the terminal
+ In the terminal, change directories to the folder containing the project. thus, cd slackReact1
+# Run the command (npm run dev)
+ This will start the process and also create a local host
+# Press O in the terminal
+ Pressing O will open the localhost port to be able to view the project
